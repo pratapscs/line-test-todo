@@ -3,7 +3,7 @@ spring:
     cache: false
 
 app:
-  edit-path: https://linenotificationtest.herokuapp.com/todos/edit
+  edit-path: https://linetodotest.herokuapp.com/todos/edit
   cron-exp: 0 0 0,6 * * ?
 
 line.bot:
@@ -14,4 +14,4 @@ line.bot:
 line.login:
   client_id: '1655981933'
   client_secret: 'e47ac643b3c92f785eafc34d69fc40b5'
-  redirect_uri: https://linenotificationtest.herokuapp.com/login/oauth2/code/line
+  redirect_uri: https://linetodotest.herokuapp.com/login/oauth2/code/line
