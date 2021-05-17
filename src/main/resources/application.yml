@@ -3,7 +3,7 @@ spring:
     cache: false
 
 app:
-  edit-path: https://abc.com/todos/edit
+  edit-path: https://linenotificationtest.herokuapp.com/todos/edit
   cron-exp: 0 0 0,6 * * ?
 
 line.bot:
