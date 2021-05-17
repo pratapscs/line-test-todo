@@ -1,0 +1,17 @@
+spring:
+  thymeleaf:
+    cache: false
+
+app:
+  edit-path: https://abc.com/todos/edit
+  cron-exp: 0 0 0,6 * * ?
+
+line.bot:
+  channel-token: 'Put Channel Token Here.'
+  channel-secret: 'Put Channel Secret Here.'
+  handle-path: /callback
+
+line.login:
+  client_id: 'Put Channel Client ID Here.'
+  client_secret: 'Put Channel Client Secret Here.'
+  redirect_uri: https://abc.com/auth

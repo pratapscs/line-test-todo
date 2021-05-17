@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit TODO</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <form method="POST" th:action="@{'/todos/edit/' + ${todo.id}}" th:object="${todo}">
+        <div class="form-group">
+            <label>Action</label>
+            <input th:field="*{action}" type="text" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <div>Date Time</div>
+            <input th:field="*{dateTime}" type="text" class="form-control"/>
+            <span th:field="*{dateTime}"></span>
+        </div>
+        <div class="form-check">
+            <input th:field="*{importance}" type="checkbox" class="form-check-input">
+            <label class="form-check-label" >Importance</label>
+        </div>
+        <div class="form-check">
+            <input th:field="*{done}" type="checkbox" class="form-check-input">
+            <label class="form-check-label" >Done</label>
+        </div>
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

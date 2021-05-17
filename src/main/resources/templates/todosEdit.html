@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Your Todo</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container-fluid">
+            <fieldset>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Action</th>
+                            <th scope="col">Date</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="todo, itemStat : ${todos}">
+                            <td>
+                                <span th:text="${todo.action}" />
+                                <span th:if="${todo.importance}" class="badge badge-primary">importance</span>
+                                <span th:if="${todo.done}" class="badge badge-success">Done</span>
+                            </td>
+                            <td><span th:text="${todo.dateTime}" /></td>
+                            <td>
+                                <a class="btn btn-light btn-sm" th:href="@{'/todos/edit/' + ${todo.id}}" role="button">Edit</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+    </div>
+    <script type="text/javascript" th:scr="@{/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
